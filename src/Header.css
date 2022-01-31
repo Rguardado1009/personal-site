@@ -4,10 +4,13 @@
   justify-content: space-between;
   z-index: 100;
   border-bottom: 1px solid;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  height: 5vh;
 }
 
 .header_logo {
   object-fit: contain;
-  height: 40px;
+  height: 5vh;
 }
- 
