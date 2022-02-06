@@ -1,18 +1,30 @@
 import "./App.css";
-import About from "./About.js";
-import Header from "./Header.js";
-import Contact from "./Contact.js";
-import Landing from "./Landing.js";
-import { Routes, Route, Switch } from "react-router-dom";
+import {
+  About,
+  Contact,
+  Header,
+  Footer,
+  Navbar,
+  Projects,
+} from "./components/index";
+import { Routes, Route } from "react-router-dom";
+import Technologies from "./components/Technologies";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="About" element={<About />} />
-        <Route path="Contact" element={<Contact />} />
-      </Routes>
+      <div className="gradient__bg">
+        <Navbar />
+      </div>
+      <div className="gradient__bg">
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="About" element={<About />} />
+          <Route path="Projects" element={<Projects />} />
+          <Route path="Contact" element={<Contact />} />
+        </Routes>
+        <Technologies />
+        {/* <Footer /> */}
+      </div>
     </div>
   );
 }
