@@ -2,8 +2,4 @@ Portfolio Site
 
 Technologies:
 
--- React.js
---JavaScript
---MongoDB
---express.js
---Node.js
+-- React.js --JavaScript --Node.js
