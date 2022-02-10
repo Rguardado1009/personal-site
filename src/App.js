@@ -5,7 +5,7 @@ import {
   Header,
   Footer,
   Navbar,
-  Projects,
+  ProjectsCard,
 } from "./components/index";
 import { Routes, Route } from "react-router-dom";
 import Technologies from "./components/Technologies";
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />} />
           <Route path="About" element={<About />} />
-          <Route path="Projects" element={<Projects />} />
+          <Route path="Projects" element={<ProjectsCard />} />
           <Route path="Contact" element={<Contact />} />
         </Routes>
         <Technologies />

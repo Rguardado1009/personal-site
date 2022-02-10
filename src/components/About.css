@@ -1,3 +1,28 @@
-.About_page {
+.about {
+  display: flex;
   height: 88vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.about-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.about-heading h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: 0.04em;
+}
+
+.about-container p {
+  font-family: var(--font-family);
+
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--color-text);
 }
