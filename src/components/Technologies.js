@@ -1,8 +1,5 @@
 import React from "react";
-import reactLogo from "../assets/SVG/react.svg";
-import jsLogo from "../assets/SVG/js.svg";
 import rubyLogo from "../assets/SVG/ruby.svg";
-import railsLogo from "../assets/SVG/rails.svg";
 import { FaReact } from "react-icons/fa";
 import { SiJavascript, SiRubyonrails } from "react-icons/si";
 
