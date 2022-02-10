@@ -8,7 +8,6 @@ import {
   ProjectsCard,
 } from "./components/index";
 import { Routes, Route } from "react-router-dom";
-import Technologies from "./components/Technologies";
 function App() {
   return (
     <div className="App">
@@ -22,7 +21,7 @@ function App() {
           <Route path="Projects" element={<ProjectsCard />} />
           <Route path="Contact" element={<Contact />} />
         </Routes>
-        <Technologies />
+        {/* <Technologies /> */}
         {/* <Footer /> */}
       </div>
     </div>

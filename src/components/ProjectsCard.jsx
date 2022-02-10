@@ -3,16 +3,23 @@ import Portfolio from "./Portfolio";
 import proj1 from "../assets/Book-Now.png";
 import proj2 from "../assets/Disney-Clone.png";
 import proj3 from "../assets/sustainable.png";
-import "./ProjectsCard.css";
+import Technologies from "./Technologies";
+import {
+  ProjectsSection,
+  ProjectsHeading,
+  ProjectsH1,
+  ProjectsContainer,
+  AllProjCont,
+} from "./ProjectsCardStyles";
 
 function Projects() {
   return (
-    <div className="projects section__padding">
-      <div className="projects-heading">
-        <h1 className="gradient__text">Projects</h1>
-      </div>
-      <div className="projects-container">
-        <div className="projects-container-projects">
+    <ProjectsSection>
+      <ProjectsHeading className="projects-heading">
+        <ProjectsH1 className="gradient__text">Projects</ProjectsH1>
+      </ProjectsHeading>
+      <ProjectsContainer className="projects-container">
+        <AllProjCont className="projects-container-projects">
           <Portfolio
             imgUrl={proj1}
             title="Book Now"
@@ -35,10 +42,10 @@ function Projects() {
             github="https://github.com/Rguardado1009/Sustainable-Health-APP"
             description=""
           />
-          {/* <Portfolio imgUrl={proj2} title="Disney Clone" /> */}
-        </div>
-      </div>
-    </div>
+        </AllProjCont>
+      </ProjectsContainer>
+      <Technologies />
+    </ProjectsSection>
   );
 }
 

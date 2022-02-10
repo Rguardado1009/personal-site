@@ -12,6 +12,9 @@ const Linkedin = "https://www.linkedin.com/in/ronaldguardado/";
 function Contact() {
   return (
     <div className="contact section__padding">
+      <div className="contact-heading">
+        <h1 className="gradient__text"> Contact </h1>
+      </div>
       <div className="contact__div-container">
         <div>
           <AiFillGithub size="5rem" color="white" />

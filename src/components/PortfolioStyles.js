@@ -1,32 +1,44 @@
-.project-container_portfolio {
+import styled from "styled-components";
+
+export const MainContainer = styled.div`
   width: 50vh;
   height: 100%;
 
   display: flex;
   flex-direction: column;
   background: var(--color-footer);
-}
+`;
 
-.project-container_portfolio-image {
+export const ImageContainer = styled.div`
   width: 100%;
   height: 100%;
   background: var(--color-footer);
-}
+`;
 
-.project-container_portfolio-image img {
+export const Image = styled.img`
   width: 100%;
   height: 100%;
-}
-
-.project-container_portfolio-content {
+`;
+export const MainContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem 1.5rem;
   height: 100%;
-}
-.description {
+`;
+export const TitleContainer = styled.div``;
+export const Title = styled.h3`
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin-top: 1rem;
+`;
+
+export const Description = styled.p`
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
@@ -37,15 +49,14 @@
   color: #fff;
   margin-bottom: 1rem;
   margin-top: 1rem;
-}
-
-.portfolio-container_portfolio-a {
+`;
+export const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 2rem;
-}
-.portfolio-container_portfolio-content a {
+`;
+export const Links = styled.a`
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
@@ -55,20 +66,4 @@
   line-height: 35px;
   color: #fff;
   cursor: pointer;
-}
-.portfolio-container_portfolio-content h3 {
-  font-family: var(--font-family);
-  font-weight: 800;
-  font-size: 25px;
-  text-align: center;
-  line-height: 30px;
-  color: #fff;
-  margin-top: 1rem;
-}
-
-@media screen and (max-width: 550px) {
-  .portfolio-container_portfolio-content h3 {
-    font-size: 18px;
-    line-height: 25px;
-  }
-}
+`;

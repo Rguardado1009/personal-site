@@ -1,7 +1,14 @@
 import { React, useState } from "react";
 import logo from "../assets/SVG/logo.svg";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import "./Navbar.css";
+import {
+  MainContainer,
+  LinksContainer,
+  LogoContainer,
+  MenuLinksContainer,
+  NavbarContainer,
+  MobileNav,
+} from "./NavbarStyles";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
@@ -45,18 +52,18 @@ const Menu = () => (
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className="nav__navbar">
-      <div className="nav__navbar-links">
-        <div className="nav__navbar-links_logo">
+    <MainContainer>
+      <LinksContainer>
+        <LogoContainer>
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
-        </div>
-        <div className="nav__navbar-links_container">
+        </LogoContainer>
+        <MenuLinksContainer>
           <Menu />
-        </div>
-      </div>
-      <div className="nav__navbar-menu">
+        </MenuLinksContainer>
+      </LinksContainer>
+      <NavbarContainer>
         {toggleMenu ? (
           <RiCloseLine
             color="fff"
@@ -71,14 +78,14 @@ function Navbar() {
           />
         )}
         {toggleMenu && (
-          <div className="nav__navbar-menu_container scale-up-center">
-            <div className="nav__navbar-menu_container-links">
+          <MobileNav className="scale-up-center">
+            <div>
               <Menu />
             </div>
-          </div>
+          </MobileNav>
         )}
-      </div>
-    </div>
+      </NavbarContainer>
+    </MainContainer>
   );
 }
 
