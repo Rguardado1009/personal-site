@@ -24,30 +24,7 @@ const styles = {
   },
 };
 
-const Menu = () => (
-  <>
-    <Stack
-      direction={{ xs: "column", sm: "row" }}
-      spacing={{ xs: 1, sm: 2, md: 4 }}
-    >
-      <Link to="/About">
-        <Button style={{ ...styles.button }}>About</Button>
-      </Link>
-      <Link to="/Projects">
-        <Button style={{ ...styles.button }}>Projects</Button>
-      </Link>
-      <Link to="/Contact">
-        <Button
-          style={{
-            ...styles.button,
-          }}
-        >
-          Contact
-        </Button>
-      </Link>
-    </Stack>
-  </>
-);
+const Menu = () => <></>;
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -60,7 +37,37 @@ function Navbar() {
           </Link>
         </LogoContainer>
         <MenuLinksContainer>
-          <Menu />
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}
+          >
+            <Link to="/About">
+              <Button
+                onClick={() => setToggleMenu(false)}
+                style={{ ...styles.button }}
+              >
+                About
+              </Button>
+            </Link>
+            <Link to="/Projects">
+              <Button
+                onClick={() => setToggleMenu(false)}
+                style={{ ...styles.button }}
+              >
+                Projects
+              </Button>
+            </Link>
+            <Link to="/Contact">
+              <Button
+                onClick={() => setToggleMenu(false)}
+                style={{
+                  ...styles.button,
+                }}
+              >
+                Contact
+              </Button>
+            </Link>
+          </Stack>
         </MenuLinksContainer>
       </LinksContainer>
       <NavbarContainer>
@@ -79,9 +86,41 @@ function Navbar() {
         )}
         {toggleMenu && (
           <MobileNav className="scale-up-center">
-            <div>
-              <Menu />
-            </div>
+            <Stack
+              className="scale-up-center"
+              direction={{ xs: "column", sm: "row" }}
+              spacing={{ xs: 1, sm: 2, md: 4 }}
+            >
+              <Link to="/About">
+                <Button
+                  className="scale-up-center"
+                  onClick={() => setToggleMenu(false)}
+                  style={{ ...styles.button }}
+                >
+                  About
+                </Button>
+              </Link>
+              <Link to="/Projects">
+                <Button
+                  className="scale-up-center"
+                  onClick={() => setToggleMenu(false)}
+                  style={{ ...styles.button }}
+                >
+                  Projects
+                </Button>
+              </Link>
+              <Link to="/Contact">
+                <Button
+                  className="scale-up-center"
+                  onClick={() => setToggleMenu(false)}
+                  style={{
+                    ...styles.button,
+                  }}
+                >
+                  Contact
+                </Button>
+              </Link>
+            </Stack>
           </MobileNav>
         )}
       </NavbarContainer>

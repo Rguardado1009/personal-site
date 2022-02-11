@@ -7,6 +7,12 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--color-footer);
+  &:hover {
+    box-shadow: rgb(0 0 0 /80%) 0px 40px 58px -16px,
+      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    transform: scale(1.02);
+    border-color: rgba(249, 249, 249, 0.8);
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -22,12 +28,11 @@ export const Image = styled.img`
 export const MainContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 1rem 1.5rem;
   height: 100%;
 `;
-export const TitleContainer = styled.div``;
 export const Title = styled.h3`
   font-family: var(--font-family);
   font-weight: 800;
